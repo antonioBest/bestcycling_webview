@@ -4,7 +4,7 @@
 
 static FlutterMethodChannel *channel;
 
-@interface FlutterWebviewPlugin : NSObject<FlutterPlugin>
+@interface BestcyclingWebview : NSObject<FlutterPlugin>
 @property (nonatomic, retain) UIViewController *viewController;
 @property (nonatomic, retain) UIWebView *webview;
 @end

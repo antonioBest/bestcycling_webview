@@ -1,16 +1,16 @@
-#import "FlutterWebviewPlugin.h"
+#import "BestcyclingWebview.h"
 
-static NSString *const CHANNEL_NAME = @"flutter_webview_plugin";
+static NSString *const CHANNEL_NAME = @"bestcycling_webview";
 
 // UIWebViewDelegate
-@interface FlutterWebviewPlugin() <WKNavigationDelegate, UIScrollViewDelegate, WKUIDelegate> {
+@interface BestcyclingWebview() <WKNavigationDelegate, UIScrollViewDelegate, WKUIDelegate> {
     BOOL _enableAppScheme;
     BOOL _enableZoom;
     NSString* _invalidUrlRegex;
 }
 @end
 
-@implementation FlutterWebviewPlugin
+@implementation BestcyclingWebview
 @synthesize webview;
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
@@ -19,7 +19,7 @@ static NSString *const CHANNEL_NAME = @"flutter_webview_plugin";
                binaryMessenger:[registrar messenger]];
 
     UIViewController *viewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-    FlutterWebviewPlugin* instance = [[FlutterWebviewPlugin alloc] initWithViewController:viewController];
+    BestcyclingWebview* instance = [[BestcyclingWebview alloc] initWithViewController:viewController];
 
     [registrar addMethodCallDelegate:instance channel:channel];
 }
